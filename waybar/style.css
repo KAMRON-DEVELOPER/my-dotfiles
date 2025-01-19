@@ -1,0 +1,44 @@
+* {
+  min-height: 0;
+  min-width: 0;
+  font-family: "Hack";
+  font-size: 12px;
+}
+
+window#waybar {
+  background: rgba(33, 33, 33, 0.4);
+  color: #787878;
+  border-bottom: 1px solid #787878;
+}
+
+#workspaces button {
+  color: #787878;
+}
+
+#workspaces button.active {
+  color: #a08c78;
+  font-weight: 800;
+}
+
+tooltip {
+  background-color: rgba(33, 33, 33, 0.9);
+  border: 1px solid #787878;
+  color: #787878;
+}
+
+tooltip label {
+  color: #787878;
+}
+
+#cpu,
+#memory,
+#pulseaudio,
+#battery,
+#network {
+  padding-left: 4px;
+}
+
+#tray {
+  margin-left: 4px;
+  margin-right: 6px;
+}
