@@ -28,6 +28,16 @@ return {
 				markdown = { "prettier", "prettierd", stop_after_first = true },
 			},
 
+			formatters = {
+				dart_format = {
+					prepend_args = { "--line-length", "220" }, -- Customize line length here
+				},
+			},
+
+			format_on_save = {
+				timeout_ms = 3000, -- Increase the timeout to 2000 ms (or more if needed)
+			},
+
 			notify_on_error = true, -- Conform will notify you when a formatter errors
 			notify_no_formatters = true, -- Conform will notify you when no formatters are available for the buffer
 
