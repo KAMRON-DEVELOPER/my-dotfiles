@@ -9,13 +9,13 @@ return {
 			formatters_by_ft = {
 				lua = { "stylua" },
 				python = { "isort", "black", lsp_format = "fallback" }, -- Conform will run multiple formatters sequentially
-				zig = { "zigfmt", lsp_format = "fallback" },
-				rust = { "rustfmt", lsp_format = "fallback", stop_after_first = true },
-				go = { "goimports", "gofmt", "gofumpt", stop_after_first = true, lsp_format = "fallback" }, -- gofmt, gofumpt, goimports
+				-- zig = { "zigfmt", lsp_format = "fallback" },
+				-- rust = { "rustfmt", lsp_format = "fallback", stop_after_first = true },
+				-- go = { "goimports", "gofmt", "gofumpt", stop_after_first = true, lsp_format = "fallback" }, -- gofmt, gofumpt, goimports
 				dart = { "dart_format" },
-				c = { "clangformat" },
-				cpp = { "clangformat" },
-				cmake = { "gersemi" },
+				-- c = { "clangformat" },
+				-- cpp = { "clangformat" },
+				-- cmake = { "gersemi" },
 				javascript = { "prettier", "prettierd", stop_after_first = true }, -- Conform will run the first available formatter
 				typescript = { "prettier", "prettierd", stop_after_first = true },
 				javascriptreact = { "prettier", "prettierd", stop_after_first = true },
@@ -30,21 +30,29 @@ return {
 
 			formatters = {
 				dart_format = {
-					prepend_args = { "--line-length", "220" }, -- Customize line length here
-				},
-			},
 
-			format_on_save = {
-				timeout_ms = 3000, -- Increase the timeout to 2000 ms (or more if needed)
+					-- command = "/home/kamronbek/Flutter/flutter/bin/dart",
+
+					command = function()
+						-- Find the dart command using `which` (works for Linux/MacOS)
+						local dart_path = vim.fn.system("which dart")
+						dart_path = vim.fn.trim(dart_path) -- Remove any extra newlines or spaces
+						return dart_path ~= "" and dart_path or "/path/to/default/dart" -- Use a fallback path if 'dart' isn't found
+					end,
+
+					args = function(ctx)
+						return { "format", "--line-length", "240", ctx.filename }
+					end,
+				},
 			},
 
 			notify_on_error = true, -- Conform will notify you when a formatter errors
 			notify_no_formatters = true, -- Conform will notify you when no formatters are available for the buffer
 
 			-- format_on_save = {
-			-- lsp_fallback = true,
-			-- async = false,
-			-- timeout_ms = 500,
+			-- 	lsp_fallback = true,
+			-- 	async = false,
+			-- 	timeout_ms = 1500,
 			-- },
 		})
 	end,
