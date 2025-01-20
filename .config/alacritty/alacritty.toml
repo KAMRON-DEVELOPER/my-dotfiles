@@ -1,8 +1,6 @@
 [general]
 live_config_reload = true
-import = [
-    "~/.config/alacritty/themes/themes/gruvbox_dark.toml"
-]
+import = ["~/.config/alacritty/themes/themes/gruvbox_dark.toml"]
 
 [window]
 padding = { x = 0, y = 0 }
@@ -10,7 +8,7 @@ opacity = 0.9
 blur = true
 
 [font]
-normal = { family="MesloLGS NF", style="Regular" }
+normal = { family = "MesloLGS NF", style = "Regular" }
 size = 10
 
 [selection]
@@ -19,6 +17,15 @@ save_to_clipboard = true
 [cursor]
 style = { shape = "Beam", blinking = "On" }
 
+[keyboard]
+bindings = [
+  # Increase font size with Ctrl + =
+  { key = "Equals", mods = "Control", action = "IncreaseFontSize" },
+  # Decrease font size with Ctrl + -
+  { key = "Minus", mods = "Control", action = "DecreaseFontSize" },
+  # Reset font size with Ctrl + 0
+  { key = "Key0", mods = "Control", action = "ResetFontSize" },
+]
+
 [mouse]
 hide_when_typing = true
-
