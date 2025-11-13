@@ -1,0 +1,16 @@
+android-studio
+docker-credential-pass
+google-chrome
+google-cloud-cli
+headlamp-bin
+hyprsysteminfo
+makepasswd
+postman-bin
+python-imageio-ffmpeg
+python-screeninfo
+sublime-text-4
+visual-studio-code-bin
+visual-studio-code-insiders-bin
+waypaper
+yay-bin
+yp-tools
