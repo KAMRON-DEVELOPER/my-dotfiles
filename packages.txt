@@ -8,9 +8,11 @@ android-studio
 base
 base-devel
 bat
+bind
 bridge-utils
 brightnessctl
 clang
+cloud-hypervisor
 cloud-init
 cloud-utils
 dnsmasq
@@ -29,6 +31,7 @@ fd
 feh
 ffmpeg
 file-roller
+firecracker
 firefox
 fzf
 ghostty
@@ -67,6 +70,7 @@ hyprshot
 hyprsysteminfo
 hyprutils
 imagemagick
+inetutils
 intel-ucode
 iptables-nft
 kdeconnect
@@ -86,6 +90,7 @@ minio-client
 mpc
 mpv
 mupdf
+natscli
 ncdu
 neovide
 neovim
@@ -112,6 +117,7 @@ pipewire-audio
 pipewire-pulse
 postgresql-libs
 postman-bin
+pycharm-community-edition
 qemu-full
 qt5-wayland
 qt5ct
@@ -121,8 +127,10 @@ remmina
 ripgrep
 rsync
 scrcpy
+screen
 smartmontools
 smplayer
+stow
 stunnel
 sublime-text-4
 swaybg
