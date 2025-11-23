@@ -3,13 +3,15 @@
 * {
   border: none;
   border-radius: 0.5em;
+  padding: 0;
+  margin: 0;
 }
 
 window {
   margin: 0px;
   border-radius: 0.75em;
   border: 1px solid @color6;
-  background-color: transparent;
+  background-color: @background;
 }
 
 #inner-box {
