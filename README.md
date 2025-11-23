@@ -1,3 +1,6 @@
+# ⚠️ MOVED
+This repository has been merged into [linux-setup](https://github.com/KAMRON-DEVELOPER/linux-setup). Please check there for updates.
+
 # My Dotfiles
 
 Personal dotfiles for Arch Linux with Hyprland, managed with [GNU Stow](https://www.gnu.org/software/stow/).
